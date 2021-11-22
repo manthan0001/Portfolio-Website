@@ -151,7 +151,7 @@ header{
     right: 0;
     z-index: 100;
 
-    transform: translate(100%);
+    transform: translateX(100%);
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
 
@@ -178,20 +178,30 @@ header{
 }
 
 
+.nav-open .nav{
+    transform: translateX(100%);
+
+}
+.nav-open .nav-toggle{
+    position: fixed;
+}
 
 
 /* Hamburger */
 
-.nav__toggle{
-    padding: .25em;
+.nav-toggle{
+    padding: .5em;
     background: transparent;
     border: 0;
     cursor: pointer;
-    position: relative;
+    position: absolute;
     right: 1em;
     top: 1em;
-    z-index: 100%;
+    z-index: 1000;
 }
+
+
+
 .hamburger{
     
     display: block;
@@ -201,18 +211,21 @@ header{
 .hamburger,
 .hamburger::before,
 .hamburger::after{
-    background: var(--clr-dark);
+    background: var(--clr-accent);
     width: 2em;
     height: 3px;
     border-radius: 1em;
     transition: transform 250ms ease-in-out;
 }
+
+
 .hamburger::before,
 .hamburger::after{
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     right: 0;
+    
 }
 
 .hamburger::before{
@@ -221,6 +234,13 @@ header{
 .hamburger::after{
     bottom: 6px;
 }
+
+
+
+
+
+
+
 
 /* Intro Section */
 
